@@ -17,7 +17,7 @@ def summarize_text(message: str, tone: str) -> str:
     }
     prompt = f"Summarize the following message into 3 bullet points using a {tone} tone:\n\n{message}"
     payload = {
-        "model": "mistralai/mistral-nemo",
+        "model": "mistralai/mistral-nemo", # <-------You can you choose your model from OpenRouter
         "messages": [{"role": "user", "content": prompt}]
     }
     try:
