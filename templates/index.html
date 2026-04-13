@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Summary Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Smart Summary Generator</h1>
+    <form id="summaryForm">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="8" placeholder="Paste your long message here..." required></textarea>
+
+      <label for="tone">Select Tone</label>
+      <select id="tone" name="tone">
+        <option value="professional">Professional</option>
+        <option value="casual">Casual</option>
+        <option value="urgent">Urgent</option>
+      </select>
+
+      <button type="submit">Summarize</button>
+    </form>
+
+    <h3>📝 Summary</h3>
+    <div id="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
